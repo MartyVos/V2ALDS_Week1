@@ -20,11 +20,13 @@ def getNumbers(s):
             if tmp != "":
                 lst.append(int(tmp))
                 tmp = ""
+    if tmp is not "":
+        lst.append(int(tmp))
     return lst
 
 
 # Testing with a string with numbers
-print(getNumbers('een123zin45 6met-632meerdere+7777getallen'))
+print(getNumbers('een123zin45 6met-632meerdere+7777getallen12'))
 
 # Testing with a string without numbers
 print(getNumbers('een zin zonder meerdere getallen'))
